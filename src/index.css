@@ -1,0 +1,108 @@
+@import "augmented-ui/augmented-ui.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-void: #030508;
+    --bg-panel: #070B14;
+    --bg-panel-glass: rgba(7, 11, 20, 0.75);
+    --cyan: #00E5FF;
+    --cyan-dim: rgba(0, 229, 255, 0.12);
+    --cyan-mid: rgba(0, 229, 255, 0.4);
+    --midnight: #0A1628;
+    --midnight-light: #111D33;
+    --alert: #FF2D55;
+    --alert-dim: rgba(255, 45, 85, 0.15);
+    --text-primary-color: #E8F4F8;
+    --text-secondary-color: #7A9CAD;
+    --text-tertiary-color: #3D5A6E;
+    --holo-gradient: linear-gradient(135deg, rgba(0,229,255,0.08) 0%, rgba(10,22,40,0.6) 50%, rgba(255,45,85,0.05) 100%);
+    --scan-line: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+    --shadow-panel: 0 4px 30px rgba(0, 0, 0, 0.5);
+    --glow-cyan: 0 0 30px rgba(0, 229, 255, 0.3), 0 0 60px rgba(0, 229, 255, 0.1);
+    --glow-cyan-border: 0 0 12px rgba(0, 229, 255, 0.5);
+    --glow-red: 0 0 20px rgba(255, 45, 85, 0.3);
+    --holo-shadow: inset 0 0 30px rgba(0, 229, 255, 0.05), 0 0 40px rgba(0, 0, 0, 0.4);
+
+    --space-section: 120px;
+    --space-panel: 32px;
+    --space-grid: 24px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 40px;
+    --space-lg: 80px;
+    --container-max: 1200px;
+    --container-pad: clamp(20px, 5vw, 60px);
+
+    --radius-panel: 4px;
+    --radius-sm: 2px;
+
+    --background: 220 30% 2%;
+    --foreground: 195 60% 94%;
+    --card: 220 30% 4%;
+    --card-foreground: 195 60% 94%;
+    --popover: 220 30% 4%;
+    --popover-foreground: 195 60% 94%;
+    --primary: 187 100% 50%;
+    --primary-foreground: 220 30% 2%;
+    --secondary: 215 50% 10%;
+    --secondary-foreground: 195 60% 94%;
+    --muted: 215 30% 8%;
+    --muted-foreground: 200 20% 50%;
+    --accent: 215 50% 10%;
+    --accent-foreground: 195 60% 94%;
+    --destructive: 350 100% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 30% 12%;
+    --input: 215 30% 12%;
+    --ring: 187 100% 50%;
+    --radius: 0.25rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: var(--text-primary-color);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(0, 229, 255, 0.3);
+    color: #E8F4F8;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .font-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: clamp(0.6rem, 0.8vw, 0.75rem);
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+  }
+
+  .scan-line-overlay {
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+    pointer-events: none;
+  }
+}
