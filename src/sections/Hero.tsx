@@ -209,6 +209,7 @@ export default function Hero() {
               color: 'var(--cyan)',
               textShadow: '0 0 40px rgba(0, 229, 255, 0.4), 0 0 80px rgba(0, 229, 255, 0.1)',
               lineHeight: 1.1,
+              whiteSpace: 'nowrap',
             }}
           >
             {nameText.split('').map((char, i) => (
@@ -237,7 +238,7 @@ export default function Hero() {
               letterSpacing: '0.35em',
             }}
           >
-            PYTHON, BACKEND DEVELOPER, AI ENGINEER & BIOINFORMATICS ENGINEER
+            SOFTWARE & AI ENGINEER | BACKEND & AI SYSTEMS | BIOINFORMATICS SPECIALIST
           </p>
 
           <p
